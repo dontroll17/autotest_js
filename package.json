@@ -4,8 +4,8 @@
   "description": "simple unit tests",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc npm run test"
+    "test": "protractor ./test/config/protractor_config.js",
+    "postinstall": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,9 @@
     "reporter": "html"
   },
   "dependencies": {
-    "chai": "^4.3.4"
+    "chai": "^4.3.4",
+    "cucumber": "^6.0.5",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^8.2.1"
   }
 }
