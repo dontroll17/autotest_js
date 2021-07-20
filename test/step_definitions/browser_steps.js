@@ -2,15 +2,15 @@ const { When, Then, setDefaultTimeout } = require('cucumber');
 const { expect } = require('chai');
 setDefaultTimeout(60000);
 
-When(/^I open google.com$/, function(){
-	return browser.get('https://www.google.com/')
+When(/^I open "([^"]*)" url$/, function(url){
+	return browser.get(url);
 });
 
-Then(/^Page title should be "Google"$/, async function(){
+Then(/^Page title should be "([^"]*)"$/, async function(title){
 	const pageTitle = await browser.getTitle();
-	expect(pageTitle).to.be.equal("Google");
+	expect(pageTitle).to.be.equal(title);
 });
 
-When(/^I wait 10 seconds$/, function(){
-	return browser.sleep(10000);
+When(/^I wait "([^"]*)" seconds$/, function(timeInSeconds){
+	return browser.sleep(timeInSeconds * 1000);
 });
