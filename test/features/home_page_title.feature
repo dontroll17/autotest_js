@@ -14,9 +14,12 @@ Scenario: Page title bash
 	Then Page title should be "Цитатник Рунета"
 	When I wait "3" seconds
 
-@yandex
-Scenario: Page title yandex
-	Given I open "https://yandex.ru/" url
-	Then Page title should be "Яндекс"
-
+@scenarioOutline
+Scenario Outline: Page title
+	Given I open "<URL>" url
+	Then Page title should be "<Title>"
 	When I wait "3" seconds
+
+	Examples:
+	| URL      			  | Title   |
+	| https://yandex.ru/  | Яндекс  |
