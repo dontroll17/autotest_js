@@ -8,6 +8,8 @@ exports.config = {
 	framework: 'custom',
 	frameworkPath: require.resolve('protractor-cucumber-framework'),
 	capabilities: {
+		shardTestFiles: yargs.instances > 1,
+		maxInstances: yargs.instances || 1,
 		browserName: 'chrome',
 		chromeOptions: {
 			args: ['--no-sandbox', '--window-size=1920,1080']
