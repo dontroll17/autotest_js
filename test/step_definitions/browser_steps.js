@@ -6,9 +6,13 @@ When(/^I open "([^"]*)" url$/, function(url){
 	return browser.get(url);
 });
 
-Then(/^Page title should be "([^"]*)"$/, async function(title){
+Then(/^Page title should (not )?be "([^"]*)"$/, async function(notArg, title){
 	const pageTitle = await browser.getTitle();
-	expect(pageTitle).to.be.equal(title);
+	if(notArg){
+		expect(pageTitle).to.not.be.equal(title);
+	}else{
+		expect(pageTitle).to.be.equal(title);	
+	}
 });
 
 When(/^I wait "([^"]*)" seconds$/, function(timeInSeconds){

@@ -4,6 +4,7 @@ Feature: Home Page Title
 Scenario: Page title
 	Given I open "https://www.google.com/" url
 	Then Page title should be "Google"
+		And Page title should not be "Boogle"
 	When I wait "3" seconds
 
 Scenario: Page title
