@@ -12,7 +12,7 @@ exports.config = {
 	],
 
 	onPrepare: () => {
-		browser.wait.ForAngularEnabled(false);
+		browser.waitForAngularEnabled(false);
 	},
 
 	jasmineNodeOpts: {

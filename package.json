@@ -34,6 +34,7 @@
     "reporter": "html"
   },
   "dependencies": {
+    "appium": "^1.8.1",
     "chai": "^4.3.4",
     "cucumber": "^6.0.5",
     "protractor": "^7.0.0",
