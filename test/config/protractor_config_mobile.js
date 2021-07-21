@@ -7,9 +7,9 @@ exports.config = {
 		deviceName: 'placeHolder'
 	},
 
-	specs: {
+	specs: [
 		'../mobile_spec.js'
-	},
+	],
 
 	onPrepare: () => {
 		browser.wait.ForAngularEnabled(false);
