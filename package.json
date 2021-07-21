@@ -4,7 +4,8 @@
   "description": "simple unit tests",
   "main": "index.js",
   "scripts": {
-    "test": "protractor ./test/config/protractor_config.js",
+    "test:desktop": "protractor ./test/config/protractor_config_desktop.js",
+    "test:mobile": "protractor ./test/config/protractor_config_mobile.js",
     "postinstall": "webdriver-manager update"
   },
   "repository": {
