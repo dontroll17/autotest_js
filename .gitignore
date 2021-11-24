@@ -5,4 +5,5 @@ package-lock.json
 /.nyc_output/
 /test/reports/*.json
 /app/*.json
-
+/new_24_11_21/node_modules/
+/new_24_11_21/package-lock.json
